@@ -2,11 +2,20 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import GlobalStyle from "./components/templates/GlobalStyle";
+import ErrorPage from "./pages/ErrorPage";
+import HomePage from "./pages/HomePage";
+import TodoPage from "./pages/TodoPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>HOME</div>,
+    element: <HomePage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/todo",
+    element: <TodoPage />,
+    errorElement: <ErrorPage />,
   },
 ]);
 
