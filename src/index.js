@@ -3,13 +3,14 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import GlobalStyle from "./components/templates/GlobalStyle";
 import ErrorPage from "./pages/ErrorPage";
-import HomePage from "./pages/HomePage";
+import HomePage, { loader as homeLoader } from "./pages/HomePage";
 import TodoPage from "./pages/TodoPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+    loader: homeLoader,
     errorElement: <ErrorPage />,
   },
   {
