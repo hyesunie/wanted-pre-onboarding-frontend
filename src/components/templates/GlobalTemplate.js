@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
-const GlobalStyle = createGlobalStyle`
+const GlobalTemplate = createGlobalStyle`
   ${reset}
   #root {
     width:100%;
@@ -12,4 +12,4 @@ const GlobalStyle = createGlobalStyle`
 }
 `;
 
-export default GlobalStyle;
+export default GlobalTemplate;
